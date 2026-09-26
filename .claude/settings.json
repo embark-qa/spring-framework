@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "f=\"${AIR_ARTIFACTS_WATCH_LIST:-/mnt/air-workspace/config/artifacts.watch}\"; [ -f \"$f\" ] || exit 0; grep -qxF \"$HOME/.claude/projects/**\" \"$f\" || echo \"$HOME/.claude/projects/**\" >> \"$f\""
+            "command": "f=\"${AIR_ARTIFACTS_WATCH_LIST:-/mnt/air-workspace/config/artifacts.watch}\"; [ -f \"$f\" ] || exit 0; mkdir -p \"$HOME/.claude/projects\"; grep -qxF \"$HOME/.claude/projects/**\" \"$f\" || echo \"$HOME/.claude/projects/**\" >> \"$f\""
           }
         ]
       }
