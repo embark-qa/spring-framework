@@ -1,0 +1,11 @@
+[features]
+hooks = true
+
+[hooks]
+managed_dir = "/etc/codex/hooks"
+
+[[hooks.SessionStart]]
+[[hooks.SessionStart.hooks]]
+type = "command"
+command = "/bin/sh /etc/codex/hooks/register-trajectories.sh"
+timeout = 5
