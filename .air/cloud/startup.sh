@@ -7,7 +7,7 @@ if [ ! -f "$f" ]; then
   exit 0
 fi
 
-for dir in "$HOME/.claude/projects" "${CODEX_HOME:-$HOME/.codex}/sessions"; do
+for dir in "$HOME/.claude/projects" "$HOME/.config/JetBrains/Air/.codex/sessions"; do
   mkdir -p "$dir"
   if grep -qxF "$dir/**" "$f"; then
     echo "already registered: $dir/**"
