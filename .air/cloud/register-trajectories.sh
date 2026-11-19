@@ -5,6 +5,9 @@ debug() {
   printf '[register-trajectories] DEBUG: %s\n' "$*" >&2
 }
 
+debug "AIR_ARTIFACTS_WATCH_LIST=${AIR_ARTIFACTS_WATCH_LIST-<unset>}"
+debug "CODEX_HOME=${CODEX_HOME-<unset>}"
+
 air_watch_list="$HOME/.config/JetBrains/Air/artifacts.watch"
 jcp_watch_list="/tmp/jcp-agent-host/artifacts.watch"
 
